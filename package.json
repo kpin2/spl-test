@@ -1,0 +1,20 @@
+{
+  "name": "spl-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "express": "^4.17.3",
+    "swagger-jsdoc": "^6.2.1",
+    "swagger-ui-express": "^4.4.0",
+    "zingchart": "^2.9.9"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

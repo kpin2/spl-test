@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="icon" href="data:;base64">
+
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Splinter-Masters</title>
+    <link rel="stylesheet" href="styles/site.css">
+    <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+
+
+<div>
+    <section id="page_intro">
+        <div id="title"><h1>Splinter-Masters</h1></div>
+        <div class="logos_container">
+            <div id="hive_logo"><img src="./styles/Hive%20logo.png" alt="Hive logo"></div>
+            <div id="spl_logo"><img src="./styles/splinterlands_logo_fx_small2.png" alt="Splinterlands logo"></div>
+        </div>
+        <br>
+    </section>
+
+    <section id="intro">
+
+        <div class="container">
+            <nav id="navbar" class="navbar">
+                <a class="button active" href="index.html">Home</a>
+                <a class="button" href="player.html">Player Statistics</a>
+                <a class="button" href="cards.html">Cards</a>
+                <a class="button" href="resources.html">Resources</a>
+                <a class="button" href="contact.html">Contact</a>
+            </nav>
+        </div>
+
+
+        <p>The goal of this project is to provide players with a toolset that can be used to easily analyze and
+            visualize
+            data
+            from
+            <b>Splinterlands</b>, the biggest Play-to-Earn game on the Hive blockchain. All Splinter-Masters tools
+            are provided free of charge, though tips are always appreciated! See the <a
+                    href="contact.html">contact</a> page for more information.</p>
+
+        <div id="data_disclaimer">
+            All the information found here is available publicly on the Hive blockchain and through the Splinterlands
+            API, for which no official documentation exists. See the 'Resources' page to view our API documentation
+            which uses custom endpoints to access the Splinterlands API.
+        </div>
+
+    </section>
+    <section id="hive_resource">
+        <p>Looking for more information on the Hive blockchain or Splinterlands? Check out our <a
+                href="/src/client/resources.html">resources</a> page.</p>
+    </section>
+</div>
+
+
+<div id="player_viewer">
+    <section id="account_name">
+        <p>On the Hive blockchain keeping track of your account address is simple. No long, complicated strings
+            of numbers and letters to keep track of. Each blockchain address is just the username that was picked during
+            account creation, preceded by the <b>@</b> symbol. This in turn is also your Splinterlands username,
+            and will be used across the entire Hive ecosystem. One of the few
+            downsides to this type of setup
+            being that you
+            <em>cannot change your username</em> once the account has been created.
+        </p>
+        <p>
+            Using a Splinterlands username there are multiple categories of data that can be pulled from the
+            blockchain, via various back-end APIs. Select one from the list below, enter a valid hive username
+            (defaults to one of my accounts otherwise), and press search!
+        </p>
+
+        <label for="player_select">What would you like to see?</label>
+        <select id="player_select" name="player_select">
+            <option value="battle_history">Battle History</option>
+            <option value="player_balances">Player balances</option>
+            <option value="current_quest">Current quest</option>
+            <option value="account_details">Account Details</option>
+            <option value="referrals">Referrals</option>
+        </select>
+        <br>
+        <label for="username">Enter a Hive account name: @</label>
+        <input id="username" placeholder="itsthebean" value="">
+        <button type="button" id="searchButton">Search</button>
+    </section>
+</div>
+
+<br>
+<section>
+    <div id="results_container_battle_history">
+        <table id="resultsTable">
+            <tr>
+                <td></td>
+                <th>Player Name</th>
+                <th>Match Result</th>
+                <th>Initial Player Rating</th>
+                <th>Final Player Rating</th>
+                <th>Match Ruleset</th>
+                <th>Match Date/Time</th>
+            </tr>
+            <tr id="player1_row">
+                <th>Player 1</th>
+                <td>data1</td>
+                <td>data2</td>
+            </tr>
+            <tr id="player2_row">
+                <th>Player 2</th>
+            </tr>
+        </table>
+
+    </div>
+
+</section>
+
+
+<section id="chart_container">
+    <div id="myChart">
+    </div>
+</section>
